@@ -42,7 +42,7 @@ public class FormTests {
         $("[aria-label$='Friday, July 31st, 1992']").click();
         $ ("#subjectsInput").setValue("Maths").pressEnter();
         $ (byText("Music")).click();
-        $("#uploadPicture").uploadFromClasspath(img); // заливка через Classpath
+ //       $("#uploadPicture").uploadFromClasspath(img); // заливка через Classpath
         $("input#uploadPicture").uploadFile(new File("src/test/resources/img/78316387_p0.jpg"));
         $("#currentAddress").setValue(address);
         $("#state").click();

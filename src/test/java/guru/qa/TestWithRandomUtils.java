@@ -14,7 +14,7 @@ import static guru.qa.utils.randomUtils.getRandomEmail;
 import static guru.qa.utils.randomUtils.getRandomString;
 import static java.lang.String.format;
 
-public class FormTestsWithRandomUtils {
+public class TestWithRandomUtils {
 
     @BeforeAll
     static void holdBrowser() {
@@ -31,7 +31,7 @@ public class FormTestsWithRandomUtils {
                nmbr = "9115513773",
                img = "img/78316387_p0.jpg",
                address = "Some address";
-        String expectedFullName = format ("%s, %S", name, sName);
+        String expectedFullName = format ("%s %S", name, sName);
 
         open("/automation-practice-form");
         $("#firstName").setValue(name);

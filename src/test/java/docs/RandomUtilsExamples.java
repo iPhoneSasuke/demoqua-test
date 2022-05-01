@@ -1,4 +1,4 @@
-package guru.qa.docs;
+package docs;
 
 //import static guru.qa.utils.RandomUtils*;
 

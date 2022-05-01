@@ -10,6 +10,8 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static guru.qa.utils.randomUtils.getRandomEmail;
+import static guru.qa.utils.randomUtils.getRandomString;
 import static java.lang.String.format;
 
 public class FormTestsWithRandomUtils {
@@ -23,9 +25,9 @@ public class FormTestsWithRandomUtils {
     @Test
     void fillForm() {
         Configuration.browserSize = "1920x1200";
-        String name = "Mark",
-               sName = "Gubin",
-               eMail = "iphonesasuke@gmail.com",
+        String name = getRandomString(10),
+               sName = getRandomString(10),
+               eMail = getRandomEmail(),
                nmbr = "9115513773",
                img = "img/78316387_p0.jpg",
                address = "Some address";

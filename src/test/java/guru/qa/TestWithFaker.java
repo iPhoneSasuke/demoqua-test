@@ -11,8 +11,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static guru.qa.utils.randomUtils.getRandomEmail;
-import static guru.qa.utils.randomUtils.getRandomString;
 import static java.lang.String.format;
 
 public class TestWithFaker {

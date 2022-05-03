@@ -1,13 +1,15 @@
 package guru.qa;
 
 import com.codeborne.selenide.Configuration;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import page.FakerComponents;
 import page.PageObjects;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class TestWithObjects {
+public class TestObjectsUndFaker {
 
     @BeforeAll
     static void holdBrowser() {
@@ -18,22 +20,28 @@ public class TestWithObjects {
 
     @Test
     void fillForm() {
-        String img = "img/78316387_p0.jpg";
-        PageObjects pageObjects = new PageObjects();
-
-
         open("/automation-practice-form");
+        PageObjects pageObjects = new PageObjects();
+        FakerComponents fakerComponents = new FakerComponents();
 
-        pageObjects.setFirstName("Mark")
-                .setLastName("Gubin")
-                .setEmail("iPhoneSasuke@gmail.com")
+        String rName = fakerComponents.callName();
+        String rLastName = fakerComponents.callLastName();
+        String rEmail = fakerComponents.callEmail();
+        String iPhone = fakerComponents.callPhoneNumb();
+        String rAddress = fakerComponents.callAddress();
+        String img = "img/78316387_p0.jpg";
+
+
+        pageObjects.setFirstName(rName)
+                .setLastName(rLastName)
+                .setEmail(rEmail)
                 .setGender("Male")
-                .setPhone("9115513773")
+                .setPhone(iPhone)
                 .setBirthDate("31", "July", "1992")
                 .setSubjects("Maths")
                 .setHobbies("Music")
                 .setPick(img)
-                .setAddress("Some address")
+                .setAddress(rAddress)
                 .setAuthority("NCR", "Noida")
                 .submit();
     }

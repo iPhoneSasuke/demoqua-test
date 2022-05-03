@@ -8,7 +8,7 @@ public class PageObjects {
 
     //locators
     SelenideElement firstNameInput = $("#firstName");
-    SelenideElement secondNameInput = $("#lastName");
+    SelenideElement lastNameInput = $("#lastName");
     SelenideElement eMailInput = $("#userEmail");
     SelenideElement phoneInput = $("#userNumber");
     SelenideElement genderInput = $("#genterWrapper");
@@ -27,8 +27,8 @@ public class PageObjects {
         return this;
     }
 
-    public PageObjects setSecondName(String value) {
-        secondNameInput.setValue(value);
+    public PageObjects setLastName(String value) {
+        lastNameInput.setValue(value);
         return this;
     }
 

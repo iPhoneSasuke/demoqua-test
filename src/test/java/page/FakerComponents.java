@@ -8,17 +8,17 @@ import static com.codeborne.selenide.Selenide.$;
 public class FakerComponents {
     Faker faker = new Faker();
 
-    public String callName() {
+    public String getName() {
         return faker.name().firstName();
     }
-    public String callLastName() {
+    public String getLastName() {
         return faker.name().lastName();
     }
-    public String callEmail() {
+    public String getEmail() {
         return faker.internet().emailAddress();
     }
-    public String callPhoneNumb() {
+    public String getPhoneNumb() {
         return faker.number().digits(10);
     }
-    public String callAddress() {return faker.address().fullAddress(); }
+    public String getAddress() {return faker.address().fullAddress(); }
 }

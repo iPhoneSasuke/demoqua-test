@@ -22,7 +22,7 @@ public class PageObjects {
     StateComponent stateComponent = new StateComponent();
 
     //actions
-    public PageObjects setFirstName(String value) { //public %название класса% %название метода%
+    public PageObjects setFirstName(String value) {
         firstNameInput.setValue(value);
         return this;
     }
